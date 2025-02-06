@@ -6,7 +6,7 @@ import asyncio
 
 def main():
     # Retrieve API keys from environment variables
-    openai_key = os.environ.get('OPENAI_API_KEY')
+    xapi_key = os.environ.get('XAI_API_KEY')
     telegram_token = os.environ.get('TELEGRAM_BOT_TOKEN')
     telegram_chat_id = os.environ.get('TELEGRAM_CHAT_ID')
     
@@ -14,7 +14,7 @@ def main():
     news_items = fetch_baba_news()
     
     # Summarize news
-    summarizer = NewsSummarizer(openai_key)
+    summarizer = NewsSummarizer(xapi_key)
     news_summary = summarizer.summarize_news(news_items)
     
     # Send to Telegram
