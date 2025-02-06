@@ -1,6 +1,6 @@
 name: Daily BABA Stock News Summary
 
-on:
+off:
   schedule:
     - cron: '0 9 * * *'  # Runs at 9 AM UTC daily
   workflow_dispatch:  # Allow manual triggering
